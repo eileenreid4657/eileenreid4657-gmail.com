@@ -3,17 +3,6 @@ DROP DATABASE IF EXISTS workouts_db;
 CREATE DATABASE workouts_db;
 USE workouts_db;
 
-DROP TABLE IF EXISTS users;
-
-CREATE TABLE users
-(
-    id INT NOT NULL AUTO_INCREMENT,
-    user_name VARCHAR (100),
-    sex BOOLEAN,
-    age INT,
-    weight INT,
-    PRIMARY KEY (id)
-);
 
 DROP TABLE IF EXISTS workouts_cardio;
 
@@ -42,6 +31,21 @@ CREATE TABLE workouts_resistance
     PRIMARY KEY (id),
     FOREIGN KEY (users_id) REFERENCES users(id)
 )
+DROP TABLE IF EXISTS users;
+CREATE TABLE users
+(
+    id INT NOT NULL AUTO_INCREMENT,
+    user_name VARCHAR (100),
+    sex BOOLEAN,
+    age INT,
+    weight INT,
+    PRIMARY KEY (id),
+    cardio_id,
+    resistance_id,
+    FOREIGN KEY (cardio_id) REFERENCES workouts_cardio(id),
+    FOREIGN KEY (resistance_id) REFERENCES workouts_resistance(id)
+);
+
 INSERT INTO users (user_name, sex, age, weight) VALUES ("Olivier", true, 27, 230);
 INSERT INTO users (user_name, sex, age, weight) VALUES ("Josh", true, 28, 175);
 INSERT INTO users (user_name, sex, age, weight) VALUES ("Patrick", true, 35, 160);

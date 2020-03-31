@@ -1,43 +1,43 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 // create our Example model
-class User extends Model {}
-
-
+class Resist extends Model {}
 
 // create fields/columns for Post model
-User.init(
+Resist.init(
   {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      primaryKey: true,
-      User.hasMany(workouts, {foreignKey: 'cardio_id'}, {foriegnKey: 'resistance_id'});
+      primaryKey: true
     },
-    user_name: {
+    workout: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1]
       }
     },
-    sex: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false
-    },
-    age: {
+    duration: {
       type: DataTypes.INTEGER,
       allowNull: false
     },
-    weight: {
+    calories: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    video: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    users_id: {
       type: DataTypes.INTEGER,
       allowNull: false
     }
   },
   {
     sequelize
-   
   }
 );
 
-module.exports = User;
+module.exports = Resist;
