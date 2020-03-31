@@ -14,3 +14,5 @@ const create = ({ body }, res) => {
 
 findAll();
 
+// node testUser.js
+
