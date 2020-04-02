@@ -12,12 +12,16 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   create: function(req, res) {
+    console.log("create: request body ...", req.body );
     db.User.create(req.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   update: function(req, res) {
-    db.User.findOneAndUpdate({ id: req.params.id }, req.body)
+    console.log("update: request body ...", req.body );
+    console.log("update: req param id...", req.params.id);
+    db.User.findByPk(req.params.id)
+      .then(dbModel => dbModel.update(req.body, {where:{id: req.params.id}}))
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },

@@ -10,7 +10,8 @@ User.init(
   {
     id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      autoIncrement: true,
+      allowNull: true,
       primaryKey: true,
       // User.hasMany(workouts, {foreignKey: 'cardio_id'}, {foriegnKey: 'resistance_id'});
     },
