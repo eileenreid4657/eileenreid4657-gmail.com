@@ -1,16 +1,16 @@
-const { User } = require('../models');
+const { Example } = require('../models');
 
 const findAll = () => {
-  User.findAll({})
+  Example.findAll({})
     .then(dbModel => console.log('dbModel', dbModel))
     .catch(err => console.log(err));
 };
 
 const create = ({ body }, res) => {
-  User.create(body)
+  Example.create(body)
     .then(dbModel => res.json(dbModel))
     .catch(err => res.status(422).json(err));
 };
 
-findAll();
+module.exports = {findAll, create};
 

@@ -12,7 +12,7 @@ User.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      User.hasMany(workouts, {foreignKey: 'cardio_id'}, {foriegnKey: 'resistance_id'});
+      // User.hasMany(workouts, {foreignKey: 'cardio_id'}, {foriegnKey: 'resistance_id'});
     },
     user_name: {
       type: DataTypes.STRING,
@@ -21,8 +21,8 @@ User.init(
         len: [1]
       }
     },
-    sex: {
-      type: DataTypes.BOOLEAN,
+    gender: {
+      type: DataTypes.CHAR,
       allowNull: false
     },
     age: {
@@ -32,11 +32,25 @@ User.init(
     weight: {
       type: DataTypes.INTEGER,
       allowNull: false
+    },
+    email: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    passwd: {
+      type: DataTypes.STRING,
+      validate: {
+        len: [1]
+      }
+
+
     }
   },
   {
-    sequelize
-   
+    sequelize,
+    modelName: "users",
+    freezeTableName: true,
+    timestamps: false
   }
 );
 

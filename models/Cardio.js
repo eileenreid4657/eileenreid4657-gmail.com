@@ -30,13 +30,17 @@ Cardio.init(
       type: DataTypes.STRING,
       allowNull: false
     },
-    users_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    }
+    // users_id: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false
+    // }
   },
   {
-    sequelize
+    sequelize,
+    modelName: "workouts_cardio",
+    freezeTableName: true,
+    timestamps: false
+
   }
 );
 

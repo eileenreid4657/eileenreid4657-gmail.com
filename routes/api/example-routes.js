@@ -7,4 +7,4 @@ router
   .get(exampleController.findAll)
   .post(exampleController.create);
 
-module.exports = router;
+  module.exports = router;
