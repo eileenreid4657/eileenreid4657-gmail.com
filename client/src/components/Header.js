@@ -15,6 +15,10 @@ class Header extends React.Component {
             {this.props.title}
           </h3>
         </div>
+        <ul className="registerUl" style={{justifyContent: "center", display: "flex"}}>
+          <li style={{ marginTop: 10, marginLeft: 100, position: "relative" }}>Signup</li>
+          <li style={{ marginTop: 10, marginLeft: 100, position: "relative" }}>Log In</li>
+        </ul>
         <img
           style={{ marginTop: 5, marginRight: 10 }}
           className="defaultIcons"
