@@ -3,9 +3,14 @@ import addOnPlus from "../icons/addonPlus.png";
 import { findByLabelText } from "@testing-library/react";
 
 class Content extends React.Component {
+
   render() {
+
     return (
       <div className="ContentDiv">
+
+     {/* <h1>Hello {userName}</h1> */}
+
         <div className="firstRow">
           <div className="firstColumn">
             <div
