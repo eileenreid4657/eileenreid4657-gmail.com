@@ -10,8 +10,8 @@ router
 router
   .route("/:id")
   .get(cardioController.findById)
-//   .put(cardioController.update)
-//   .delete(cardioController.remove);
+//.put(cardioController.update)
+//.delete(cardioController.remove);
 
 
 module.exports = router;

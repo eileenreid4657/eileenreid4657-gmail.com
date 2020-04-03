@@ -31,6 +31,18 @@ CREATE TABLE workouts_resistance
     
 );
 
+
+DROP TABLE IF EXISTS workouts_yoga;
+
+CREATE TABLE workouts_yoga
+(
+    id INT NOT NULL AUTO_INCREMENT,
+    pose VARCHAR (100) NOT NULL,
+    calories INT NOT NULL, 
+    video VARCHAR (100) NOT NULL,
+    users_id INT NOT NULL,
+);
+
 DROP TABLE IF EXISTS users;
 CREATE TABLE users
 (
@@ -63,6 +75,14 @@ INSERT INTO workouts_cardio (workout, duration, calories, video ) VALUES ("power
 INSERT INTO workouts_cardio (workout, duration, calories, video ) VALUES ("nordic walking", 45, 300, "https://www.youtube.com/watch?v=zAmsHhc2zCw&list=TLPQMDYwMzIwMjD_XG9U-DG2cw&index=1" );
 INSERT INTO workouts_cardio (workout, duration, calories, video ) VALUES ("rowing", 60, 250, "https://www.youtube.com/watch?v=L3DDYjUOlJg");
 INSERT INTO workouts_cardio (workout, duration, calories, video ) VALUES ("stair climber", 30, 350, "https://www.youtube.com/watch?v=ST-5lD69XqU" );
+
+INSERT INTO workouts_yoga (pose, calories, video) VALUES ("downward facing dog", 100, "https://youtu.be/JmW6Ofblhtk");
+INSERT INTO workouts_yoga (pose, calories, video) VALUES ("plank pose", 80,"https://youtu.be/pvIjsG5Svck");
+INSERT INTO workouts_yoga (pose, calories, video) VALUES ("warrior one", 30, "https://youtu.be/k4qaVoAbeHM");
+INSERT INTO workouts_yoga (pose, calories, video) VALUES ("warrior two", 34, "https://youtu.be/QbIrd6onJwQ");
+INSERT INTO workouts_yoga (pose, calories, video) VALUES ("lotus pose", 90, "https://youtu.be/odKi0b2K4LY");
+INSERT INTO workouts_yoga (pose, calories, video) VALUES ("cobra pose", 100, "https://youtu.be/zgvolE4NAH0");
+
 
 INSERT INTO workouts_resistance (workout, duration, calories, video) VALUES ("kettlebells", 70, 400, "https://www.youtube.com/watch?v=6l2Iu26oWW8" );
 INSERT INTO workouts_resistance (workout, duration, calories, video) VALUES ("medicine ball",  40, 320, "https://www.youtube.com/watch?v=-0TMFnoE9Cw" );
