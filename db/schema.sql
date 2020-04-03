@@ -14,7 +14,6 @@ CREATE TABLE workouts_cardio
     calories INT NOT NULL, 
     video VARCHAR (100) NOT NULL,
     PRIMARY KEY (id)
-   
 );
 
 DROP TABLE IF EXISTS workouts_resistance;
@@ -26,12 +25,8 @@ CREATE TABLE workouts_resistance
     duration INT NOT NULL,
     calories INT NOT NULL,
     video VARCHAR (100) NOT NULL,
-    PRIMARY KEY (id)
-    
-    
+    PRIMARY KEY (id)   
 );
-
-
 DROP TABLE IF EXISTS workouts_yoga;
 
 CREATE TABLE workouts_yoga
@@ -40,7 +35,7 @@ CREATE TABLE workouts_yoga
     pose VARCHAR (100) NOT NULL,
     calories INT NOT NULL, 
     video VARCHAR (100) NOT NULL,
-    users_id INT NOT NULL,
+    PRIMARY KEY (id)  
 );
 
 DROP TABLE IF EXISTS users;
@@ -56,8 +51,6 @@ CREATE TABLE users
     PRIMARY KEY (id),
     cardio_id int,
     resistance_id int
-    
-   
 );
 
 INSERT INTO users (user_name, gender, age, email, passwd, weight) VALUES ("Olivier", "M", 27, "joe@joe.com","pass123",  230);
