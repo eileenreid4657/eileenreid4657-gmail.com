@@ -48,9 +48,8 @@ CREATE TABLE users
     email VARCHAR(30),
     passwd VARCHAR(20),
     weight INT,
-    PRIMARY KEY (id),
-    cardio_id int,
-    resistance_id int
+    PRIMARY KEY (id)
+    
 );
 
 INSERT INTO users (user_name, gender, age, email, passwd, weight) VALUES ("Olivier", "M", 27, "joe@joe.com","pass123",  230);

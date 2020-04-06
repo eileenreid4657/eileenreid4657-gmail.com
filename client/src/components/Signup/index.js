@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, useHistory } from 'react-router-dom';
 import '../Signup/index.css';
 import API from '../../utils/API';
 
@@ -10,7 +10,7 @@ export default function Signup() {
   const genderRef = useRef();
   const ageRef = useRef();
   const weightRef = useRef();
-
+  const history = useHistory();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const [name, setName] = useState();
@@ -51,8 +51,11 @@ export default function Signup() {
       .then(res => {
         console.log('API result data', res);
         userId = res.id;
+        history.push("/Login");
         // renderUserHome();
         // window.location.href = '/';
+        
+
       })
       .catch(err => {
         console.log(err);
@@ -70,7 +73,7 @@ export default function Signup() {
               <b>Email</b>
             </label>
             <input
-              type="text"
+              type="email"
               ref={emailRef}
               placeholder="example@example.com"
               name="email"
@@ -81,7 +84,7 @@ export default function Signup() {
               <b>Password</b>
             </label>
             <input
-              type="text"
+              type="password"
               ref={passwordRef}
               placeholder="Enter Password"
               name="password"

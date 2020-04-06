@@ -16,8 +16,8 @@ class Header extends React.Component {
           </h3>
         </div>
         <ul className="registerUl" style={{justifyContent: "center", display: "flex"}}>
-          <li style={{ marginTop: 10, marginLeft: 100, position: "relative" }}>Signup</li>
-          <li style={{ marginTop: 10, marginLeft: 100, position: "relative" }}>Log In</li>
+          <li style={{ marginTop: 10, marginLeft: 100, position: "relative" }}><a href="/signup">Sign up</a></li>
+          <li style={{ marginTop: 10, marginLeft: 100, position: "relative" }}><a href="/login">Log in</a></li>
         </ul>
         <img
           style={{ marginTop: 5, marginRight: 10 }}

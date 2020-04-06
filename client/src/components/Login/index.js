@@ -22,7 +22,7 @@ export default function Login(props) {
             <FormGroup controlId="email" bsSize="large">
                 <FormLabel>Email</FormLabel>
                 <FormControl
-                autofocus
+                autoFocus
                 type="email"
                 value={email}
                 onChange={e => setEmail(e.target.value)}
@@ -37,7 +37,7 @@ export default function Login(props) {
                 type="password"
                 />
             </FormGroup>
-            <Button block bsSize="large" disabled={!validateForm()} type="submit">
+            <Button block bssize="large" disabled={!validateForm()} type="submit">
                 Login
             </Button>
             <p>Don't have an account? Sign up.</p>
