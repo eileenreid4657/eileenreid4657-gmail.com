@@ -3,10 +3,10 @@ const routes = require('./routes');
 const sequelize = require('./config/connection');
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3002;
 
-sequelize.authenticate().then(() => console.log("database connected ... "))
-.catch(err => console.log("error " + err ));
+// sequelize.authenticate().then(() => console.log("database connected ... "))
+// .catch(err => console.log("error " + err ));
 
 
 app.use(express.json());
