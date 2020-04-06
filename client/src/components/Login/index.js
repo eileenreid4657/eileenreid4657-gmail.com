@@ -15,8 +15,9 @@ export default function Login(props) {
         event.preventDefault();
     }
     return (
-        <Router>
         <div className="Login">
+        <Router>
+        <div>
             <h1>Login</h1>
             <form onSubmit={handleSubmit}>
             <FormGroup controlId="email" bsSize="large">
@@ -47,5 +48,6 @@ export default function Login(props) {
             </form>
         </div>
         </Router>
+        </div>
     );
 }
