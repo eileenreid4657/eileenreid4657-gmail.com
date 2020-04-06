@@ -132,7 +132,7 @@ export default function Signup() {
               required
             />
 
-            <div>
+            <div className="cancelSavebtns">
               <button type="button" className="cancelbtn">
                 Cancel
               </button>
