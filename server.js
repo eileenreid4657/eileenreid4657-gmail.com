@@ -3,7 +3,7 @@ const routes = require('./routes');
 const sequelize = require('./config/connection');
 
 const app = express();
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.PORT || 3003;
 
 // sequelize.authenticate().then(() => console.log("database connected ... "))
 // .catch(err => console.log("error " + err ));
