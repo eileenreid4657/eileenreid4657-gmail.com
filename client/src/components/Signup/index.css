@@ -92,3 +92,10 @@ h2 {
 form {
   border: none;
 }
+
+.signupbtn,.cancelbtn{
+  background-color: rgb(68, 68, 192);
+  width: 100%;
+}
+
+
