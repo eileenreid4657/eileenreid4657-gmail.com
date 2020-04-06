@@ -52,9 +52,6 @@ export default function Signup() {
         console.log('API result data', res);
         userId = res.id;
         history.push("/Login");
-        // renderUserHome();
-        // window.location.href = '/';
-        
 
       })
       .catch(err => {

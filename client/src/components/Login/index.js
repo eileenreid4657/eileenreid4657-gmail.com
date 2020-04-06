@@ -1,11 +1,13 @@
-import React, { useState } from "react";
-import { Button, FormGroup, FormLabel, FormControl } from "react-bootstrap";
-import "./index.css";
-import { BrowserRouter as Router } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Button, FormGroup, FormLabel, FormControl } from 'react-bootstrap';
+import './index.css';
+import { BrowserRouter as Router, useHistory } from 'react-router-dom';
+import API from '../../utils/API';
 
 export default function Login(props) {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const history = useHistory();
 
     function validateForm() {
         return email.length > 0 && password.length > 0;
@@ -51,3 +53,24 @@ export default function Login(props) {
         </div>
     );
 }
+  function validateForm() {
+    return email.length > 0 && password.length > 0;
+  }
+  function handleSubmit(event) {
+    event.preventDefault();
+    console.log('handleSubmit');
+    const formData = {
+      email: email,
+      passwd: password
+    };
+    API.getUserLogin(formData)
+      .then(res => {
+        console.log('API result data', res);
+        history.push('/User/' + res.id);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }
+  
+

@@ -6,9 +6,9 @@ import dailyIcon from "../icons/dailyIcon.png";
 import calenderIcon from "../icons/calenderIcon.png";
 import logoutIcon from "../icons/logoutIcon.png";
 
-class LeftNav extends React.Component {
-  render() {
-    return (
+export default function LeftNav({ id, name }) {
+  console.log("LeftNav id, name", id + " " + name);  
+  return (
       <div className="leftNav">
         <ul className="mainNavItems">
           <li>
@@ -48,6 +48,3 @@ class LeftNav extends React.Component {
       </div>
     );
   }
-}
-
-export default LeftNav;
