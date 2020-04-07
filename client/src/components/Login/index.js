@@ -19,10 +19,10 @@ export default function Login(props) {
       email: email,
       passwd: password
     };
-    API.getUserLogin(formData)
+    API.getUserByLogin(formData)
       .then(res => {
         console.log('API result data', res);
-        history.push('/User/' + res.id);
+        history.push('/User/' + res.data.id);
       })
       .catch(err => {
         console.log(err);

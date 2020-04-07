@@ -20,22 +20,22 @@ export default {
     console.log("saveUser",postData);
     return axios.post("/api/user", postData);
   },
-  getUserLogin(formData){
-    console.log(`getUserLogin... formData ${JSON.stringify(formData)}`);
+  getUserByLogin(formData){
+    console.log(`getUserByLogin... formData ${JSON.stringify(formData)}`);
 
-    return new Promise((resolve) => { 
-      setTimeout(() => { 
-        resolve({id: 2}); 
-        }, 1000); 
-      }); 
-    // return axios({
-    //   method: 'get',
-    //   url: '/api/user/login',
-    //   data: {
-    //     email: formData.email,
-    //     password: formData.password
-    //   }
-    // });
+    // return new Promise((resolve) => { 
+    //   setTimeout(() => { 
+    //     resolve({id: 2}); 
+    //     }, 1000); 
+      // }); 
+    return axios({
+      method: 'post',
+      url: '/api/login',
+      data: {
+        email: formData.email,
+        passwd: formData.password
+      }
+    });
   }
 
 };

@@ -8,10 +8,9 @@ router
   .post(userController.create);
 
 router
-  .route("/:id")
+  .route('/:id')
   .get(userController.findById)
   .put(userController.update)
   .delete(userController.remove);
-
 
 module.exports = router;
