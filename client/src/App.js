@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Main from "./components/Main";
 import Login from './components/Login'
 import Signup from './components/Signup'
+import EditProfile from './components/EditProfile';
 
 function App() {
   return (

@@ -5,22 +5,17 @@ class Header extends React.Component {
   render() {
     return (
       <header>
-        <div style={{ position: "relative" }}>
-          <div className="MenuIcon">
-            <a id="nav-toggle" className="" href="#">
-              <span></span>
-            </a>
-          </div>
-          <h3 style={{ marginTop: 10, marginLeft: 100, position: "relative" }}>
-            {this.props.title}
-          </h3>
+        <div>
+          <h4><a className="headerLink" href="/">Safe Weight</a></h4>
         </div>
-        <ul className="registerUl" style={{justifyContent: "center", display: "flex"}}>
-          <li style={{ marginTop: 10, marginLeft: 100, position: "relative" }}><a href="/signup">Sign up</a></li>
-          <li style={{ marginTop: 10, marginLeft: 100, position: "relative" }}><a href="/login">Log in</a></li>
+        <ul className="registerUl">
+          <li><a className="headerLink" href="/signup">Sign up</a></li>
+          <li><a className="headerLink"  href="/login">Log in</a></li>
+          {/* <li><a className="headerLink"  href="/editprofile">Edit Profile</a></li> */}
+
         </ul>
         <img
-          style={{ marginTop: 5, marginRight: 10 }}
+          style={{ marginTop: 5, marginRight: 10, cursor: "pointer" }}
           className="defaultIcons"
           src={notiIcon}
         />

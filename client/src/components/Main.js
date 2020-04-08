@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import LeftNav from './LeftNavigation';
 import Content from './Content';
+
+
 import { useParams, useHistory } from 'react-router-dom';
 import API from '../utils/API';
 
@@ -39,7 +41,7 @@ export default function Main() {
         name={user}
         gender={gender}
         age={age}
-        weight={weight}
+        weight={weight} 
         email={email}
       ></Content>
     </div>

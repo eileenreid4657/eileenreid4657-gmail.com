@@ -26,8 +26,8 @@ export default function LeftNav({ id, name }) {
             <sup>Weekly</sup>
           </li>
           <li>
-            <img src={instagramIcon} className="defaultIcons" />
-            <sup>Instagram</sup>
+            <img  src={instagramIcon} className="defaultIcons" />
+            <sup><a target="#" href="https://www.instagram.com/p/B-tz4qLpBBQ/">Instagram</a></sup>
           </li>
           <li>
             <img src={facebookIcon} className="defaultIcons" />
