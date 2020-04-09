@@ -27,7 +27,7 @@ export default function LeftNav({ id, name }) {
           </li>
           <li>
             <img  src={instagramIcon} className="defaultIcons" />
-            <sup><a target="#" href="https://www.instagram.com/p/B-tz4qLpBBQ/">Instagram</a></sup>
+            <sup><a target="#" href="https://www.instagram.com/naomi_marie_e/">Instagram</a></sup>
           </li>
           <li>
             <img src={facebookIcon} className="defaultIcons" />
@@ -35,7 +35,7 @@ export default function LeftNav({ id, name }) {
           </li>
           <li>
             <img src={twitterIcon} className="defaultIcons" />
-            <sup>Twitter</sup>
+            <sup><a target="#" href="https://twitter.com/Eileen_Ironic">Twitter</a></sup>
           </li>
           <li>
             <img
