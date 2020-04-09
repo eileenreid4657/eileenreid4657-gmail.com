@@ -8,14 +8,13 @@ const PORT = process.env.PORT || 3002;
 // sequelize.authenticate().then(() => console.log("database connected ... "))
 // .catch(err => console.log("error " + err ));
 
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('client/public'));
-}
+//  if (process.env.NODE_ENV === 'production') {
+//    app.use(express.static('client/public'));
+//  }
 // turn on routes
 app.use(routes);
 
